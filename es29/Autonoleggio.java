@@ -19,11 +19,12 @@ public class Autonoleggio {
         String modello = scanner.nextLine();
         System.out.println("Inserisci numero di posti: ");
         int nPosti = Integer.parseInt(scanner.nextLine());
+        scanner.close();
         if (codice >= 0 && codice <= 1000) {
             v[codice] = new Veicolo(targa, marca, modello, nPosti, codice);
             codice++;
             return 0;
         }
-        return 0;
+        return -1;
     }
 }
