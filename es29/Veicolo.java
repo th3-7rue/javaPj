@@ -1,13 +1,29 @@
 public class Veicolo {
-    private String codice, targa, marca, modello;
-    private int nPosti;
+    private String targa, marca, modello;
+    private int nPosti, codice = 0;
 
-    public String getCodice() {
-        return codice;
+    @Override
+    public String toString() {
+        return "Veicolo [targa=" + targa + ", marca=" + marca + ", modello=" + modello + ", nPosti=" + nPosti
+                + ", codice=" + codice + "]";
     }
 
-    public void setCodice(String codice) {
-        this.codice = codice;
+    public Veicolo(String targa, String marca, String modello, int nPosti) {
+        this.targa = targa;
+        this.marca = marca;
+        this.modello = modello;
+        this.nPosti = nPosti;
+        codice++;
+    }
+
+    public int eliminaVeicolo(int myCodice) {
+        for (int i = 0; i < v.length; i++) {
+
+        }
+    }
+
+    public int getCodice() {
+        return codice;
     }
 
     public String getTarga() {
@@ -42,17 +58,4 @@ public class Veicolo {
         this.nPosti = nPosti;
     }
 
-    public Veicolo(String codice, String targa, String marca, String modello, int nPosti) {
-        this.codice = codice;
-        this.targa = targa;
-        this.marca = marca;
-        this.modello = modello;
-        this.nPosti = nPosti;
-    }
-
-    @Override
-    public String toString() {
-        return "Veicolo [codice=" + codice + ", targa=" + targa + ", marca=" + marca + ", modello=" + modello
-                + ", nPosti=" + nPosti + "]";
-    }
 }
