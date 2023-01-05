@@ -1,6 +1,6 @@
 public class Veicolo {
     private String targa, marca, modello;
-    private int nPosti, codice = 0;
+    private int nPosti, codice;
 
     @Override
     public String toString() {
@@ -8,18 +8,12 @@ public class Veicolo {
                 + ", codice=" + codice + "]";
     }
 
-    public Veicolo(String targa, String marca, String modello, int nPosti) {
+    public Veicolo(String targa, String marca, String modello, int nPosti, int codice) {
         this.targa = targa;
         this.marca = marca;
         this.modello = modello;
         this.nPosti = nPosti;
-        codice++;
-    }
-
-    public int eliminaVeicolo(int myCodice) {
-        for (int i = 0; i < v.length; i++) {
-
-        }
+        this.codice = codice;
     }
 
     public int getCodice() {
