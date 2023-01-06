@@ -21,22 +21,23 @@ public class Main {
             }
             switch (scelta) {
                 case 1:
-                    v0.aggiungiVeicolo();
+                    System.out.println(v0.aggiungiVeicolo());
                     break;
                 case 2:
-                    v0.eliminaVeicoloCodice();
+                    System.out.println(v0.eliminaVeicoloCodice());
                     break;
                 case 3:
-                    v0.eliminaVeicoloTarga();
+                    System.out.println(v0.eliminaVeicoloTarga());
                     break;
                 case 4:
-                    v0.ricercaVeicoloCodice();
+                    System.out.println(v0.ricercaVeicoloCodice());
                     break;
                 case 5:
-                    v0.ricercaVeicoloTarga();
+                    System.out.println(v0.ricercaVeicoloTarga());
                     break;
                 case 6:
-
+                    System.out.println(v0.ricercaVeicoli_nPosti());
+                    break;
                 default:
                     break;
             }

@@ -25,32 +25,16 @@ public class Veicolo {
         return targa;
     }
 
-    public void setTarga(String targa) {
-        this.targa = targa;
-    }
-
     public String getMarca() {
         return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
     }
 
     public String getModello() {
         return modello;
     }
 
-    public void setModello(String modello) {
-        this.modello = modello;
-    }
-
     public int getnPosti() {
         return nPosti;
-    }
-
-    public void setnPosti(int nPosti) {
-        this.nPosti = nPosti;
     }
 
 }
