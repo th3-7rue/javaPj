@@ -9,7 +9,7 @@ public class Autonoleggio {
         v = new Veicolo[1000];
     }
 
-    public int aggiungiVeicolo() {
+    public String aggiungiVeicolo() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci targa: ");
         String targa = scanner.nextLine();
@@ -25,12 +25,12 @@ public class Autonoleggio {
         if (posizione >= 0 && posizione < 1000) {
             v[codice] = new Veicolo(targa, marca, modello, nPosti, codice, posizione);
             codice++;
-            return 0;
+            return "Veicolo aggiuntom con successo";
         }
-        return -1;
+        return "Posizione non valida";
     }
 
-    public int ricercaVeicoloTarga() {
+    public String ricercaVeicoloTarga() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci targa: ");
         String targa = scanner.nextLine();
@@ -40,15 +40,15 @@ public class Autonoleggio {
 
                 if (v[i].getTarga() == targa) {
                     System.out.println(v[i]);
-                    return 0;
+                    return "Ricerca completata con successo";
                 }
             }
         }
-        return -1;
+        return "Veicolo non trovato";
 
     }
 
-    public int eliminaVeicoloTarga() {
+    public String eliminaVeicoloTarga() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci targa: ");
         String targa = scanner.nextLine();
@@ -58,14 +58,14 @@ public class Autonoleggio {
 
                 if (v[i].getTarga() == targa) {
                     v[i] = null;
-                    return 0;
+                    return "Veicolo eliminato con successo";
                 }
             }
         }
-        return -1;
+        return "Veicolo non trovato";
     }
 
-    public int ricercaVeicoloCodice() {
+    public String ricercaVeicoloCodice() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci codice: ");
         int codice = Integer.parseInt(scanner.nextLine());
@@ -75,15 +75,15 @@ public class Autonoleggio {
 
                 if (v[i].getCodice() == codice) {
                     System.out.println(v[i]);
-                    return 0;
+                    return "Ricerca completata con successo";
                 }
             }
         }
-        return -1;
+        return "Veicolo non trovato";
 
     }
 
-    public int eliminaVeicoloCodice() {
+    public String eliminaVeicoloCodice() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci codice: ");
         int codice = Integer.parseInt(scanner.nextLine());
@@ -93,15 +93,15 @@ public class Autonoleggio {
 
                 if (v[i].getCodice() == codice) {
                     v[i] = null;
-                    return 0;
+                    return "Veicolo eliminato con successo";
                 }
             }
         }
 
-        return -1;
+        return "Veicolo non trovato";
     }
 
-    public int ricercaVeicoli_nPosti() {
+    public String ricercaVeicoli_nPosti() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci numero di posti: ");
         int nPosti = Integer.parseInt(scanner.nextLine());
@@ -114,11 +114,7 @@ public class Autonoleggio {
                 }
             }
         }
-        if (nVeicoliTrovati > 0) {
-            System.out.println("Sono stati trovati " + nVeicoliTrovati + " veicoli con " + nPosti + " posti");
-            return 0;
-        }
-        return -1;
+        return "Sono stati trovati " + nVeicoliTrovati + " veicoli con " + nPosti + " posti";
 
     }
 }
