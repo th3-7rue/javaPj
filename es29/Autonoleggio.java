@@ -23,7 +23,7 @@ public class Autonoleggio {
         int posizione = Integer.parseInt(scanner.nextLine());
 
         if (posizione >= 0 && posizione < 1000) {
-            v[codice] = new Veicolo(targa, marca, modello, nPosti, codice, posizione);
+            v[posizione] = new Veicolo(targa, marca, modello, nPosti, codice, posizione);
             codice++;
             return "Veicolo aggiuntom con successo";
         }
