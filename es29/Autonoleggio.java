@@ -25,7 +25,7 @@ public class Autonoleggio {
         if (posizione >= 0 && posizione < 1000) {
             v[posizione] = new Veicolo(targa, marca, modello, nPosti, codice, posizione);
             codice++;
-            return "Veicolo aggiuntom con successo";
+            return "Veicolo aggiunto con successo";
         }
         return "Posizione non valida";
     }
@@ -116,5 +116,9 @@ public class Autonoleggio {
         }
         return "Sono stati trovati " + nVeicoliTrovati + " veicoli con " + nPosti + " posti";
 
+    }
+
+    public String salvaSuFile() {
+        return
     }
 }
