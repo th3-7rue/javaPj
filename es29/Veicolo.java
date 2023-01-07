@@ -4,9 +4,8 @@ public class Veicolo {
 
     @Override
     public String toString() {
-        return "Veicolo " + codice + " [targa=" + targa + ", marca=" + marca + ", modello=" + modello + ", nPosti="
-                + nPosti
-                + ", poszione=" + posizione + "]";
+        return "Veicolo [targa=" + targa + ", marca=" + marca + ", modello=" + modello + ", nPosti=" + nPosti
+                + ", codice=" + codice + ", posizione=" + posizione + "]";
     }
 
     public Veicolo(String targa, String marca, String modello, int nPosti, int codice, int posizione) {
