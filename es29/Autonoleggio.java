@@ -1,4 +1,9 @@
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Autonoleggio {
     private Veicolo[] v;
@@ -119,6 +124,17 @@ public class Autonoleggio {
     }
 
     public String salvaSuFile() {
-        return
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("Inventario.txt"))) {
+            for (int i = 0; i < v.length; i++) {
+                if (v[i] != null) {
+                    bw.write(v[i].toString());
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+        return "Inventario salvato con successo";
     }
 }

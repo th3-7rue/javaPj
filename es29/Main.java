@@ -17,7 +17,7 @@ public class Main {
             System.out.println("6. Ricerca di tutti i veicoli con n posti");
             System.out.println("7. Salva inventario su file");
             scelta = Integer.parseInt(scanner.nextLine());
-            if (scelta < 0 || scelta > 6) {
+            if (scelta < 0 || scelta > 7) {
                 System.out.println("Scelta non valida");
             }
             switch (scelta) {
@@ -40,7 +40,8 @@ public class Main {
                     System.out.println(v0.ricercaVeicoli_nPosti());
                     break;
                 case 7:
-
+                    System.out.println(v0.salvaSuFile());
+                    break;
                 default:
                     break;
             }

@@ -1,0 +1,2 @@
+Veicolo 2 [targa=hrgtf, marca=hrt, modello=hrt, nPosti=8, poszione=0]
+Veicolo 1 [targa=hres, marca=reg, modello=gefr, nPosti=6, poszione=4]
