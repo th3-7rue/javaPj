@@ -185,7 +185,7 @@ public class Autonoleggio {
         for (int i = 1; i < marche.length; i++) {
             if (marche[i] != marca) {
                 System.out.println(marca + ": " + conta);
-                conta = 0;
+                conta = 1;
                 marca = marche[i];
             } else {
                 conta++;
