@@ -1,0 +1,2 @@
+Veicolo [targa=jrft, marca=htrd, modello=aserh, nPosti=6, codice=1, posizione=235]
+Veicolo [targa=hrt, marca=jytd, modello=rts, nPosti=4, codice=1, posizione=354]

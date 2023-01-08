@@ -1,9 +1,11 @@
 import java.util.Scanner;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class Autonoleggio {
     private Veicolo[] v;
@@ -124,7 +126,12 @@ public class Autonoleggio {
     }
 
     public String salvaSuFile() {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("Inventario.txt"))) {
+        // salvataggio su file di testo
+        Scanner scanner = new Scanner(System.in);
+        String nomeFile;
+        System.out.println("Come vuoi chiamare il file? ");
+        nomeFile = scanner.nextLine();
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomeFile + ".txt"))) {
             for (int i = 0; i < v.length; i++) {
                 if (v[i] != null) {
                     bw.write(v[i].toString());
@@ -132,9 +139,31 @@ public class Autonoleggio {
                 }
             }
         } catch (IOException e) {
-            // TODO: handle exception
             e.printStackTrace();
         }
-        return "Inventario salvato con successo";
+        // salvataggio su file dat
+        try (FileOutputStream fos = new FileOutputStream(nomeFile + ".dat");
+                ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(v);
+            return "Inventario salvato con successo";
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Errore";
+        }
     }
+
+    public String ripristinaDaFile() {
+        String nomeFile;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Da quale file vuoi effettuare il ripristino? ");
+        nomeFile = scanner.nextLine() + ".dat";
+        try (FileInputStream fis = new FileInputStream(nomeFile); ObjectInputStream ois = new ObjectInputStream(fis)) {
+            v = (Veicolo[]) ois.readObject();
+            return "Ripristino effettuato con successo";
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            return "Errore";
+        }
+    }
+    // TODO inventario [marca: numero veicoli]
 }

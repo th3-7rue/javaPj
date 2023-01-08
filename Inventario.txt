@@ -1,1 +1,0 @@
-Veicolo [targa=htr, marca=htr, modello=jytr, nPosti=4, codice=1, posizione=2]

@@ -1,4 +1,6 @@
-public class Veicolo {
+import java.io.Serializable;
+
+public class Veicolo implements Serializable {
     private String targa, marca, modello;
     private int nPosti, codice, posizione;
 
