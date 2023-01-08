@@ -30,11 +30,16 @@ public class Autonoleggio {
         int posizione = Integer.parseInt(scanner.nextLine());
 
         if (posizione >= 0 && posizione < 1000) {
-            v[posizione] = new Veicolo(targa, marca, modello, nPosti, codice, posizione);
-            codice++;
-            return "Veicolo aggiunto con successo";
+            if (v[posizione] == null) {
+                v[posizione] = new Veicolo(targa, marca, modello, nPosti, codice, posizione);
+                codice++;
+                return "Veicolo aggiunto con successo";
+            } else {
+                return "Posto già occupato dal veicolo " + v[posizione].getCodice();
+            }
+        } else {
+            return "Posizione non valida";
         }
-        return "Posizione non valida";
     }
 
     public String ricercaVeicoloTarga() {
