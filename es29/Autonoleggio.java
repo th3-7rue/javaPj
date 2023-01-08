@@ -166,7 +166,6 @@ public class Autonoleggio {
         }
     }
 
-    // TODO inventario [marca: numero veicoli]
     public String inventario() {
         String[] marche = new String[1000];
         int m = 0;
@@ -179,7 +178,6 @@ public class Autonoleggio {
         if (m == 0) {
             return "Non ci sono veicoli";
         }
-        // int[] nVeicoliPerMarca = new int[1000];
         String marca = marche[0];
         int conta = 1;
         for (int i = 1; i < marche.length; i++) {
