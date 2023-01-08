@@ -165,5 +165,33 @@ public class Autonoleggio {
             return "Errore";
         }
     }
+
     // TODO inventario [marca: numero veicoli]
+    public String inventario() {
+        String[] marche = new String[1000];
+        int m = 0;
+        for (int i = 0; i < v.length; i++) {
+            if (v[i] != null) {
+                marche[m] = v[i].getMarca();
+                m++;
+            }
+        }
+        if (m == 0) {
+            return "Non ci sono veicoli";
+        }
+        // int[] nVeicoliPerMarca = new int[1000];
+        String marca = marche[0];
+        int conta = 1;
+        for (int i = 1; i < marche.length; i++) {
+            if (marche[i] != marca) {
+                System.out.println(marca + ": " + conta);
+                conta = 0;
+                marca = marche[i];
+            } else {
+                conta++;
+            }
+        }
+        return "Inventario creato con successo";
+
+    }
 }
