@@ -7,19 +7,19 @@ public class Main {
         int a;
         Scanner s = new Scanner(System.in);
         int divisore = 0;
-        System.out.println("Inserisci il divisore ");
-        divisore = Integer.parseInt(s.nextLine());
 
         do {
+            System.out.println("Inserisci il divisore ");
+            divisore = Integer.parseInt(s.nextLine());
+
             try {
                 a = 15 / divisore;
                 System.out.println("Il risultato e' " + a);
                 break;
             } catch (ArithmeticException e) {
                 System.out.println("Impossibile");
-                System.out.println("Inserisci il divisore ");
-                divisore = Integer.parseInt(s.nextLine());
             }
         } while (true);
+        s.close();
     }
 }
