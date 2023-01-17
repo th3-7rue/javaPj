@@ -10,7 +10,7 @@ public class Main {
                     "errore nell'orario specificato " + exception.getH() + exception.getM() + exception.getS());
         }
         try {
-            int ss = GestioneOrari.differenzaOrari(0, 0, 0, 24, 0, 0);
+            int ss = GestioneOrari.differenzaOrari(0, 0, 0, 20, 0, 0);
             System.out.println("secondi di differenza : " + ss);
         } catch (OrarioNonValido exception) {
             System.out.println(
