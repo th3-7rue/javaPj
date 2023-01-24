@@ -1,5 +1,6 @@
 package es30;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Porto {
@@ -65,7 +66,7 @@ public class Porto {
             }
             b[posto] = new Barca(nome, nazionalita, tipologia, lunghezza, stazza);
             System.out.println("Alla barca e' stato assegnato il posto " + posto);
-        } catch (ArrayStoreException e) {
+        } catch (ArrayStoreException | InputMismatchException e) {
             System.out.println("Errore: uno o piu' dati non validi");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Errore: posizione non valida");
@@ -83,14 +84,17 @@ public class Porto {
             int giorni = t.nextInt();
             float costoAffitto;
             if (b[posto].getTipologia().equals("vela")) {
-                costoAffitto = 10 * b[posto].getLunghezza();
+                costoAffitto = giorni * 10 * b[posto].getLunghezza();
             } else {
-                costoAffitto = 20 * b[posto].getStazza();
+                costoAffitto = giorni * 20 * b[posto].getStazza();
             }
             b[posto] = null;
             System.out.println("L'importo dell'affitto e' " + costoAffitto);
-        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Il posto " + posto + " e' stato liberato");
+        } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
             System.out.println("Posto non valido");
+        } catch (NullPointerException e) {
+            System.out.println("Il posto non e' occupato");
         }
 
     }
