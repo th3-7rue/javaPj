@@ -16,7 +16,7 @@ public class Main {
             System.out.println("3. Ricerca barca");
             System.out.println("4. Salva stato del porto");
             System.out.println("5. Mostra barche per nazionalità");
-            scelta = Integer.parseInt(scanner.nextLine());
+            scelta = scanner.nextInt();
             if (scelta < 0 || scelta > 9) {
                 System.out.println("Scelta non valida");
             }

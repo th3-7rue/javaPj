@@ -29,7 +29,7 @@ public class Porto {
             System.out.print("Inserisci stazza: ");
             float stazza = tastiera.nextFloat();
             System.out.print("Inserisci tipologia: ");
-            String tipologia = tastiera.nextLine();
+            String tipologia = tastiera.next();
 
             if (tipologia.equals("vela")) {
                 int i = 50;
