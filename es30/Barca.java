@@ -14,6 +14,14 @@ public class Barca implements Serializable {
         this.stazza = stazza;
     }
 
+    public Barca(Barca b) {
+        this.nome = b.nome;
+        this.nazionalita = b.nazionalita;
+        this.tipologia = b.tipologia;
+        this.lunghezza = b.lunghezza;
+        this.stazza = b.stazza;
+    }
+
     @Override
     public String toString() {
         return "Barca [nome=" + nome + ", nazionalita=" + nazionalita + ", tipologia=" + tipologia + ", lunghezza="
