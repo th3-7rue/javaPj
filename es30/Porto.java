@@ -13,18 +13,19 @@ public class Porto {
 
     public void assegnaPosto() {
         int posto = -1;
-        Scanner tastiera = new Scanner(System.in);
-        System.out.print("Inserisci nome: ");
-        String nome = tastiera.nextLine();
-        System.out.print("Inserisci nazionalita': ");
-        String nazionalita = tastiera.nextLine();
-        System.out.print("Inserisci lunghezza: ");
-        float lunghezza = tastiera.nextFloat();
-        System.out.print("Inserisci stazza: ");
-        float stazza = tastiera.nextFloat();
-        System.out.print("Inserisci tipologia: ");
-        String tipologia = tastiera.nextLine();
         try {
+            Scanner tastiera = new Scanner(System.in);
+            System.out.print("Inserisci nome: ");
+            String nome = tastiera.nextLine();
+            System.out.print("Inserisci nazionalita': ");
+            String nazionalita = tastiera.nextLine();
+            System.out.print("Inserisci lunghezza: ");
+            float lunghezza = tastiera.nextFloat();
+            System.out.print("Inserisci stazza: ");
+            float stazza = tastiera.nextFloat();
+            System.out.print("Inserisci tipologia: ");
+            String tipologia = tastiera.nextLine();
+
             if (tipologia.equals("vela")) {
                 int i = 50;
                 int cont = 0;
