@@ -25,16 +25,12 @@ public class Main {
                     v0.assegnaPosto();
                     break;
                 case 2:
-                    System.out.println(v0.eliminaVeicoloCodice());
                     break;
                 case 3:
-                    System.out.println(v0.eliminaVeicoloTarga());
                     break;
                 case 4:
-                    System.out.println(v0.ricercaVeicoloCodice());
                     break;
                 case 5:
-                    System.out.println(v0.ricercaVeicoloTarga());
                     break;
                 default:
                     break;
