@@ -144,4 +144,8 @@ public class Porto {
         }
 
     }
+
+    public void ripristina() {
+        
+    }
 }
