@@ -25,6 +25,7 @@ public class Main {
                     v0.assegnaPosto();
                     break;
                 case 2:
+                    v0.liberaPosto();
                     break;
                 case 3:
                     break;

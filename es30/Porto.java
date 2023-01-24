@@ -73,4 +73,25 @@ public class Porto {
             System.out.println(e.getMessage());
         }
     }
+
+    public void liberaPosto() {
+        Scanner t = new Scanner(System.in);
+        try {
+            System.out.print("Inserisci il posto da liberare: ");
+            int posto = t.nextInt();
+            System.out.print("Inserisci i giorni di sosta: ");
+            int giorni = t.nextInt();
+            float costoAffitto;
+            if (b[posto].getTipologia().equals("vela")) {
+                costoAffitto = 10 * b[posto].getLunghezza();
+            } else {
+                costoAffitto = 20 * b[posto].getStazza();
+            }
+            b[posto] = null;
+            System.out.println("L'importo dell'affitto e' " + costoAffitto);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Posto non valido");
+        }
+
+    }
 }
