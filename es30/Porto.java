@@ -1,9 +1,11 @@
 package es30;
 
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -146,6 +148,16 @@ public class Porto {
     }
 
     public void ripristina() {
-        
+        String nomeFile;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Da quale file vuoi effettuare il ripristino? ");
+        nomeFile = scanner.nextLine() + ".dat";
+        try (FileInputStream fis = new FileInputStream(nomeFile); ObjectInputStream ois = new ObjectInputStream(fis)) {
+            b = (Barca[]) ois.readObject();
+            System.out.println("Ripristino effettuato con successo");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Il file indicato non esiste");
+        }
+
     }
 }
