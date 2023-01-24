@@ -23,11 +23,11 @@ public class Porto {
         String tipologia = tastiera.nextLine();
         try {
             b[posto] = new Barca(nome, nazionalita, tipologia, lunghezza, stazza);
-            if
+            
         } catch (ArrayStoreException e) {
             System.out.println("Errore: uno o piu' dati non validi");
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Errore: osizione non valida");
+            System.out.println("Errore: posizione non valida");
         }
     }
 }

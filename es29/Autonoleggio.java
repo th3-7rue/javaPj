@@ -166,8 +166,7 @@ public class Autonoleggio {
             v = (Veicolo[]) ois.readObject();
             return "Ripristino effettuato con successo";
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-            return "Errore";
+            return "Il file indicato non esiste";
         }
     }
 
