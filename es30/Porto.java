@@ -148,7 +148,15 @@ public class Porto {
     }
 
     public void arrayNaz() {
-        
+        Barca[] vN;
+        Scanner t = new Scanner(System.io);
+        System.out.println("Inserisci nazionalita': ");
+        String naz = t.next();
+        for (int i = 0; i < b.length; i++) {
+            if (b[i] != null) {
+
+            }
+        }
     }
 
     public void ripristina() {
