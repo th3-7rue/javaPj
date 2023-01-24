@@ -28,6 +28,7 @@ public class Main {
                     v0.liberaPosto();
                     break;
                 case 3:
+                    v0.ricerca();
                     break;
                 case 4:
                     break;

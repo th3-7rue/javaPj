@@ -99,4 +99,17 @@ public class Porto {
         }
 
     }
+
+    public void ricerca() {
+        Scanner t = new Scanner(System.in);
+        try {
+            System.out.print("Inserisci posto: ");
+            int posto = t.nextInt();
+            System.out.println(b[posto]);
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {
+            System.out.println("Posto non valido");
+        } catch (NullPointerException e) {
+            System.out.println("Il posto non e' occupato");
+        }
+    }
 }
