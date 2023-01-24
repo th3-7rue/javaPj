@@ -1,0 +1,1 @@
+Barca [nome=dhf, nazionalita=gdf, tipologia=, lunghezza=43.0, stazza=543.0]

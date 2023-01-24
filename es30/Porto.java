@@ -1,5 +1,10 @@
 package es30;
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -111,5 +116,32 @@ public class Porto {
         } catch (NullPointerException e) {
             System.out.println("Il posto non e' occupato");
         }
+    }
+
+    public void salva() {
+        Scanner scanner = new Scanner(System.in);
+        String nomeFile;
+        System.out.println("Come vuoi chiamare il file? ");
+        nomeFile = scanner.nextLine();
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomeFile + ".txt"))) {
+            for (int i = 0; i < b.length; i++) {
+                if (b[i] != null) {
+                    bw.write(b[i].toString());
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // salvataggio su file dat
+        try (FileOutputStream fos = new FileOutputStream(nomeFile + ".dat");
+                ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(b);
+            System.out.println("Inventario salvato con successo");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Errore");
+        }
+
     }
 }

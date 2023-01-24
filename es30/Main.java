@@ -31,6 +31,7 @@ public class Main {
                     v0.ricerca();
                     break;
                 case 4:
+                    v0.salva();
                     break;
                 case 5:
                     break;
