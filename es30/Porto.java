@@ -147,6 +147,10 @@ public class Porto {
 
     }
 
+    public void arrayNaz() {
+        
+    }
+
     public void ripristina() {
         String nomeFile;
         Scanner scanner = new Scanner(System.in);
