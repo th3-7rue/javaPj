@@ -15,14 +15,14 @@ public class Main {
             System.out.println("2. Libera posto");
             System.out.println("3. Ricerca barca");
             System.out.println("4. Salva stato del porto");
-            System.out.println("9. Mostra barche per nazionalità");
+            System.out.println("5. Mostra barche per nazionalità");
             scelta = Integer.parseInt(scanner.nextLine());
             if (scelta < 0 || scelta > 9) {
                 System.out.println("Scelta non valida");
             }
             switch (scelta) {
                 case 1:
-                    System.out.println(v0.aggiungiVeicolo());
+                    v0.assegnaPosto();
                     break;
                 case 2:
                     System.out.println(v0.eliminaVeicoloCodice());
@@ -35,18 +35,6 @@ public class Main {
                     break;
                 case 5:
                     System.out.println(v0.ricercaVeicoloTarga());
-                    break;
-                case 6:
-                    System.out.println(v0.ricercaVeicoli_nPosti());
-                    break;
-                case 7:
-                    System.out.println(v0.salvaSuFile());
-                    break;
-                case 8:
-                    System.out.println(v0.ripristinaDaFile());
-                    break;
-                case 9:
-                    System.out.println(v0.inventario());
                     break;
                 default:
                     break;

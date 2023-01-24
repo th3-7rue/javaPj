@@ -9,7 +9,7 @@ public class Porto {
         b = new Barca[100];
     }
 
-    private void assegnaPosto(int posto) {
+    public void assegnaPosto() {
         Scanner tastiera = new Scanner(System.in);
         System.out.print("Inserisci nome: ");
         String nome = tastiera.nextLine();
@@ -23,7 +23,6 @@ public class Porto {
         String tipologia = tastiera.nextLine();
         try {
             b[posto] = new Barca(nome, nazionalita, tipologia, lunghezza, stazza);
-            
         } catch (ArrayStoreException e) {
             System.out.println("Errore: uno o piu' dati non validi");
         } catch (ArrayIndexOutOfBoundsException e) {
