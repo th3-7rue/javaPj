@@ -19,9 +19,9 @@ public class Porto {
         System.out.print("Inserisci nazionalita': ");
         String nazionalita = tastiera.nextLine();
         System.out.print("Inserisci lunghezza: ");
-        float lunghezza = Float.parseFloat(tastiera.nextLine());
+        float lunghezza = tastiera.nextFloat();
         System.out.print("Inserisci stazza: ");
-        float stazza = Float.parseFloat(tastiera.nextLine());
+        float stazza = tastiera.nextFloat();
         System.out.print("Inserisci tipologia: ");
         String tipologia = tastiera.nextLine();
         try {
