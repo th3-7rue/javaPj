@@ -57,4 +57,22 @@ public class Biblioteca {
         }
         System.out.println("Sono stati trovati " + conta + " libri");
     }
+
+    public void ricercaPerAutore() {
+        Scanner t = new Scanner(System.in);
+        String autore;
+        int conta = 0;
+        System.out.print("Inserisci l'autore del quale si vogliono ricercare i libri: ");
+        autore = t.nextLine();
+        for (int i = 0; i < l.length; i++) {
+            if (l[i] != null) {
+                if (l[i].getAutore().equals(autore)) {
+                    System.out.println(l[i]);
+                    conta++;
+                }
+            }
+        }
+        System.out.println("Sono stati trovati " + conta + " libri");
+
+    }
 }
