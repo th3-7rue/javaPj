@@ -15,6 +15,7 @@ public class Main {
                 System.out.println("2. Ricerca un libro a partire dal titolo");
                 System.out.println("3. Ricerca tutti i libri di uno specifico autore");
                 System.out.println("4. Determina il numero di libri presenti");
+                System.out.println("5. Rimuovi un libro");
                 if (t.hasNext()) {
                     scelta = t.nextInt();
                 }
@@ -38,8 +39,10 @@ public class Main {
                     b.ricercaPerAutore();
                     break;
                 case 4:
+                    b.stampaNlibri();
                     break;
                 case 5:
+                    b.rimuoviLibro();
                     break;
                 default:
                     break;
