@@ -148,14 +148,24 @@ public class Porto {
     }
 
     public void arrayNaz() {
-        Barca[] vN;
-        Scanner t = new Scanner(System.io);
-        System.out.println("Inserisci nazionalita': ");
+        Barca[] vN = new Barca[DIM];
+        int ind = 0;
+        Scanner t = new Scanner(System.in);
+        System.out.print("Inserisci nazionalita': ");
         String naz = t.next();
         for (int i = 0; i < b.length; i++) {
             if (b[i] != null) {
-
+                if (b[i].getNazionalita().equals(naz)) {
+                    vN[ind] = b[i];
+                    ind++;
+                }
             }
+        }
+        System.out.println("Sono state trovate " + ind + " barche di nazionalita' " + naz);
+        int s = 0;
+        while (vN[s] != null) {
+            System.out.println(vN[s]);
+            s++;
         }
     }
 
@@ -163,7 +173,7 @@ public class Porto {
         String nomeFile;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Da quale file vuoi effettuare il ripristino? ");
-        nomeFile = scanner.nextLine() + ".dat";
+        nomeFile = scanner.next() + ".dat";
         try (FileInputStream fis = new FileInputStream(nomeFile); ObjectInputStream ois = new ObjectInputStream(fis)) {
             b = (Barca[]) ois.readObject();
             System.out.println("Ripristino effettuato con successo");
