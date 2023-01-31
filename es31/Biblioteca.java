@@ -10,34 +10,33 @@ public class Biblioteca {
     }
 
     public void aggiungiLibro() {
+        int posizione;
+        String autore, editore, titolo;
+        int anno;
         try {
-            int posizione;
-            String autore,editore,titolo;
-            int anno;
-            try {
-                Scanner t = new Scanner(System.in);
-                System.out.println("Aggiunta di un libro:");
-                System.out.print("Inserisci l'autore: ");
-                autore = t.next();
-                System.out.print("Inserisci il titolo: ");
-                titolo = t.next();
-                System.out.print("Inserisci l'anno di pubblicazione: ");
-                anno = t.nextInt();
-                System.out.print("Inserisci l'editore: ");
-                editore = t.next();
-                System.out.print("Inserisci la posizione: ");
-                posizione = t.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Errore: dati non validi");
-            }
+            Scanner t = new Scanner(System.in);
+            System.out.println("Aggiunta di un libro:");
+            System.out.print("Inserisci l'autore: ");
+            autore = t.next();
+            System.out.print("Inserisci il titolo: ");
+            titolo = t.next();
+            System.out.print("Inserisci l'anno di pubblicazione: ");
+            anno = t.nextInt();
+            System.out.print("Inserisci l'editore: ");
+            editore = t.next();
+            System.out.print("Inserisci la posizione: ");
+            posizione = t.nextInt();
             if (l[posizione] != null) {
                 throw new IllegalArgumentException("La posizione e' gia' occupata");
             }
-            l[posizione]=new Libro(autore, titolo, editore, anno);
+            l[posizione] = new Libro(autore, titolo, editore, anno);
+        } catch (InputMismatchException e) {
+            System.out.println("Errore: dati non validi");
         } catch (ArrayStoreException e) {
             System.out.println("Errore: dati non validi");
         } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException e) {
             System.out.println("Errore: posizione non valida");
         }
+
     }
 }

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int scelta;
+        int scelta = 0;
         Biblioteca b = new Biblioteca();
         Scanner t = new Scanner(System.in);
         do {
