@@ -23,7 +23,7 @@ public class Biblioteca {
             System.out.print("Inserisci l'anno di pubblicazione: ");
             anno = t.nextInt();
             System.out.print("Inserisci l'editore: ");
-            editore = t.nextLine();
+            editore = t.next();
             System.out.print("Inserisci la posizione: ");
             posizione = t.nextInt();
             if (l[posizione] != null) {

@@ -3,18 +3,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int scelta = 0;
+        int scelta = -1;
         Biblioteca b = new Biblioteca();
-        Scanner t = new Scanner(System.in);
         do {
-            System.out.println("Menu:");
-            System.out.println("0. Esci");
-            System.out.println("1. Aggiungi un nuovo libro alla biblioteca");
-            System.out.println("2. Ricerca un libro a partire dal titolo");
-            System.out.println("4. Ricerca tutti i libri di uno specifico autore");
-            System.out.println("5. Determina il numero di libri presenti");
             try {
-                scelta = t.nextInt();
+                scelta = -1;
+                Scanner t = new Scanner(System.in);
+                System.out.println("Menu:");
+                System.out.println("0. Esci");
+                System.out.println("1. Aggiungi un nuovo libro alla biblioteca");
+                System.out.println("2. Ricerca un libro a partire dal titolo");
+                System.out.println("4. Ricerca tutti i libri di uno specifico autore");
+                System.out.println("5. Determina il numero di libri presenti");
+                if (t.hasNext()) {
+                    scelta = t.nextInt();
+                }
                 if (scelta < 0 || scelta > 5) {
                     throw new IllegalArgumentException();
                 }
@@ -40,5 +43,6 @@ public class Main {
                     break;
             }
         } while (scelta != 0);
+
     }
 }
