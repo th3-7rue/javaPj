@@ -11,7 +11,7 @@ public class Biblioteca {
 
     public void aggiungiLibro() {
         try {
-            int posizione = 0;
+            int posizione;
             String autore,editore,titolo;
             int anno;
             try {
@@ -31,7 +31,7 @@ public class Biblioteca {
                 System.out.println("Errore: dati non validi");
             }
             if (l[posizione] != null) {
-                throw new IllegalArgumentException("La posizione e' gia' occupata")
+                throw new IllegalArgumentException("La posizione e' gia' occupata");
             }
             l[posizione]=new Libro(autore, titolo, editore, anno);
         } catch (ArrayStoreException e) {
