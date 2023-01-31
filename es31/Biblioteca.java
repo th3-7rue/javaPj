@@ -84,4 +84,18 @@ public class Biblioteca {
         }
         System.out.println("Sono stati trovati " + conta + " libri");
     }
+
+    public void rimuoviLibro() {
+        Scanner t = new Scanner(System.in);
+        try {
+            System.out.print("Inserisci la posizione del libro da rimuovere: ");
+            int posto = t.nextInt();
+            l[posto] = null;
+            System.out.println("Il libro in posizione " + posto + " e' stato rimosso");
+        } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
+            System.out.println("Posizione non valido");
+        } catch (NullPointerException e) {
+            System.out.println("La posizuone non e' occupata");
+        }
+    }
 }
