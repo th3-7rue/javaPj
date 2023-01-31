@@ -30,6 +30,7 @@ public class Biblioteca {
                 throw new IllegalArgumentException("La posizione e' gia' occupata");
             }
             l[posizione] = new Libro(autore, titolo, editore, anno);
+            System.out.println("Libro inserito con successo in posizione " + posizione);
         } catch (InputMismatchException e) {
             System.out.println("Errore: dato non valido");
         } catch (ArrayStoreException e) {
