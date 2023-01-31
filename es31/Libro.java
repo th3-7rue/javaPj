@@ -11,6 +11,11 @@ public class Libro implements Serializable{
         this.anno = anno;
     }
 
+    @Override
+    public String toString() {
+        return "Libro [autore=" + autore + ", titolo=" + titolo + ", editore=" + editore + ", anno=" + anno + "]";
+    }
+
     public String getAutore() {
         return autore;
     }

@@ -32,6 +32,7 @@ public class Main {
                     b.aggiungiLibro();
                     break;
                 case 2:
+                    b.ricercaDaTitolo();
                     break;
                 case 3:
                     break;

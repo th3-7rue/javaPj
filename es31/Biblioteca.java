@@ -40,4 +40,21 @@ public class Biblioteca {
         }
 
     }
+
+    public void ricercaDaTitolo() {
+        Scanner t = new Scanner(System.in);
+        String titolo;
+        int conta = 0;
+        System.out.print("Inserisci il titolo del libro da cercare: ");
+        titolo = t.nextLine();
+        for (int i = 0; i < l.length; i++) {
+            if (l[i] != null) {
+                if (l[i].getTitolo().equals(titolo)) {
+                    System.out.println(l[i]);
+                    conta++;
+                }
+            }
+        }
+        System.out.println("Sono stati trovati " + conta + " libri");
+    }
 }
