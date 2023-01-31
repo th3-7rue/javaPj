@@ -73,6 +73,15 @@ public class Biblioteca {
             }
         }
         System.out.println("Sono stati trovati " + conta + " libri");
+    }
 
+    public void stampaNlibri() {
+        int conta = 0;
+        for (int i = 0; i < l.length; i++) {
+            if (l[i] != null) {
+                conta++;
+            }
+        }
+        System.out.println("Sono stati trovati " + conta + " libri");
     }
 }

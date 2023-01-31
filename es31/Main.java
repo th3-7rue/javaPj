@@ -13,8 +13,8 @@ public class Main {
                 System.out.println("0. Esci");
                 System.out.println("1. Aggiungi un nuovo libro alla biblioteca");
                 System.out.println("2. Ricerca un libro a partire dal titolo");
-                System.out.println("4. Ricerca tutti i libri di uno specifico autore");
-                System.out.println("5. Determina il numero di libri presenti");
+                System.out.println("3. Ricerca tutti i libri di uno specifico autore");
+                System.out.println("4. Determina il numero di libri presenti");
                 if (t.hasNext()) {
                     scelta = t.nextInt();
                 }
@@ -35,6 +35,7 @@ public class Main {
                     b.ricercaDaTitolo();
                     break;
                 case 3:
+                    b.ricercaPerAutore();
                     break;
                 case 4:
                     break;
