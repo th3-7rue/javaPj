@@ -1,3 +1,10 @@
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -97,5 +104,46 @@ public class Biblioteca {
         } catch (NullPointerException e) {
             System.out.println("La posizuone non e' occupata");
         }
+    }
+
+    public void salva() {
+        Scanner scanner = new Scanner(System.in);
+        String nomeFile;
+        System.out.println("Come vuoi chiamare il file? ");
+        nomeFile = scanner.nextLine();
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomeFile + ".txt"))) {
+            for (int i = 0; i < l.length; i++) {
+                if (l[i] != null) {
+                    bw.write(l[i].toString());
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // salvataggio su file dat
+        try (FileOutputStream fos = new FileOutputStream(nomeFile + ".dat");
+                ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(l);
+            System.out.println("Inventario salvato con successo");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Errore");
+        }
+
+    }
+
+    public void ripristina() {
+        String nomeFile;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Da quale file vuoi effettuare il ripristino? ");
+        nomeFile = scanner.next() + ".dat";
+        try (FileInputStream fis = new FileInputStream(nomeFile); ObjectInputStream ois = new ObjectInputStream(fis)) {
+            l = (Libro[]) ois.readObject();
+            System.out.println("Ripristino effettuato con successo");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Il file indicato non esiste");
+        }
+
     }
 }
