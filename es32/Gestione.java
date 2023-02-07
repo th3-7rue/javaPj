@@ -12,7 +12,6 @@ public class Gestione {
         pc = new Computer[MAXpc];
     }
 
-
     // public Computer(int codice, int anno, String marca, String modello, double
     // disco, double monitor, double ram, double vcpu) {
     public void aggiungi() {
@@ -35,8 +34,8 @@ public class Gestione {
             System.out.println("posizione ");
             int i = s.nextInt();
             if (pc[i] != null) System.out.println("posizione occupata");
-            else pc[i] = new Computer(  anno,  marca,  modello, disco,  monitor,  ram,
-             vcpu);
+            else pc[i] = new Computer(  codice,  anno,  vcpu, ram,  disco,  ram,
+             marca,modello);
         } catch (ArrayStoreException e) {
             System.out.println("Errore");
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -49,8 +48,8 @@ public class Gestione {
         System.out.println("inserisci la posizione ");
         int i = s.nextInt();
         try {
-            if (c[i] != null) {
-                c[i] = null;
+            if (pc[i] != null) {
+                pc[i] = null;
                 System.out.println("il pc è stato cancellato ");
             } else
                 System.out.println("non c'è nessun pc in questa posizione ");
@@ -66,8 +65,8 @@ public class Gestione {
         System.out.println("inserisci il codice ");
         int codice = Integer.parseInt(s.nextLine());
         for (int i = 0; true; ++i) {
-            if (c[i] != null) {
-                if (codice == c[i].getCodice()) {
+            if (pc[i] != null) {
+                if (codice ==pc[i].getCodice()) {
                     System.out.println(c[i]);
                 }
             }

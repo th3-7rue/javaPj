@@ -18,4 +18,36 @@ public class Computer {
         this.modello = modello;
     }
 
+    public int getCodice() {
+        return codice;
+    }
+
+    public int getAnno() {
+        return anno;
+    }
+
+    public double getClockCPU() {
+        return clockCPU;
+    }
+
+    public double getDimRAM() {
+        return dimRAM;
+    }
+
+    public double getDimDisk() {
+        return dimDisk;
+    }
+
+    public double getDimMonitor() {
+        return dimMonitor;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModello() {
+        return modello;
+    }
+
 }
