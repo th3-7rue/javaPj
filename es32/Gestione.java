@@ -34,17 +34,19 @@ public class Gestione {
             System.out.println("posizione ");
             int i = s.nextInt();
             if (pc[i] != null)
-                System.out.println("posizione occupata");
+                return "posizione occupata";
             else {
                 pc[i] = new Computer(codice, anno, vcpu, ram, disco, ram,
                         marca, modello);
                 codice++;
+
+                return pc[i].toString();
             }
 
         } catch (ArrayStoreException e) {
-            System.out.println("Errore");
+            return "Errore";
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Errore");
+            return "Errore";
         }
     }
 
@@ -55,14 +57,16 @@ public class Gestione {
         try {
             if (pc[i] != null) {
                 pc[i] = null;
-                System.out.println("il pc è stato cancellato ");
+                return "il pc è stato cancellato ";
             } else
-                System.out.println("non c'è nessun pc in questa posizione ");
+                return "non c'è nessun pc in questa posizione ";
         } catch (NullPointerException e) {
             System.out.println("posizione non valida ");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("errore");
         }
+        return "errore";
+
     }
 
     public String ricercaPerCodice() {
@@ -72,7 +76,7 @@ public class Gestione {
         for (int i = 0; true; ++i) {
             if (pc[i] != null) {
                 if (codice == pc[i].getCodice()) {
-                    System.out.println(pc[i]);
+                    return pc[i].toString();
                 }
             }
         }

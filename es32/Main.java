@@ -1,10 +1,11 @@
 package es32;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int scelta = -1;
         Gestione b = new Gestione();
         do {
@@ -37,19 +38,19 @@ public class Main {
                     System.out.println(b.aggiungi());
                     break;
                 case 2:
-                    System.out.println(b.elimina());
+                    System.out.println(b.rimuovi());
                     break;
                 case 3:
-                    System.out.println(b.ricercaCodice());
+                    System.out.println(b.ricercaPerCodice());
                     break;
                 case 4:
-                    System.out.println(b.ricercaCaratteristiche());
+                    //System.out.println(b.());
                     break;
                 case 5:
                     System.out.println(b.salva());
                     break;
                 case 6:
-                    System.out.println(b.ripristina());
+                    System.out.println(b.carica());
                     break;
                 default:
                     break;

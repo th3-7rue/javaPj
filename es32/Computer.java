@@ -50,4 +50,11 @@ public class Computer {
         return modello;
     }
 
+    @Override
+    public String toString() {
+        return "Computer [codice=" + codice + ", anno=" + anno + ", clockCPU=" + clockCPU + ", dimRAM=" + dimRAM
+                + ", dimDisk=" + dimDisk + ", dimMonitor=" + dimMonitor + ", marca=" + marca + ", modello=" + modello
+                + "]";
+    }
+
 }
