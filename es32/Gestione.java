@@ -14,7 +14,7 @@ public class Gestione {
 
     // public Computer(int codice, int anno, String marca, String modello, double
     // disco, double monitor, double ram, double vcpu) {
-    public void aggiungi() {
+    public String aggiungi() {
         Scanner s = new Scanner(System.in);
         try {
             System.out.println("anno ");
@@ -33,9 +33,14 @@ public class Gestione {
             double vcpu = Double.parseDouble(s.next());
             System.out.println("posizione ");
             int i = s.nextInt();
-            if (pc[i] != null) System.out.println("posizione occupata");
-            else pc[i] = new Computer(  codice,  anno,  vcpu, ram,  disco,  ram,
-             marca,modello);
+            if (pc[i] != null)
+                System.out.println("posizione occupata");
+            else {
+                pc[i] = new Computer(codice, anno, vcpu, ram, disco, ram,
+                        marca, modello);
+                codice++;
+            }
+
         } catch (ArrayStoreException e) {
             System.out.println("Errore");
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -43,7 +48,7 @@ public class Gestione {
         }
     }
 
-    public void rimuovi() {
+    public String rimuovi() {
         Scanner s = new Scanner(System.in);
         System.out.println("inserisci la posizione ");
         int i = s.nextInt();
@@ -60,33 +65,34 @@ public class Gestione {
         }
     }
 
-    public void ricercaPerCodice() {
+    public String ricercaPerCodice() {
         Scanner s = new Scanner(System.in);
         System.out.println("inserisci il codice ");
         int codice = Integer.parseInt(s.nextLine());
         for (int i = 0; true; ++i) {
             if (pc[i] != null) {
-                if (codice ==pc[i].getCodice()) {
-                    System.out.println(c[i]);
+                if (codice == pc[i].getCodice()) {
+                    System.out.println(pc[i]);
                 }
             }
         }
     }
 
-    public void salva() throws java.io.IOException {
+    public String salva() throws java.io.IOException {
         ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream("pc.bin"));
-        stream.writeObject(this.c);
+        stream.writeObject(this.pc);
         stream.close();
+        return "File salvato";
     }
 
-    public void carica() throws IOException {
+    public String carica() throws IOException {
         ObjectInputStream stream = new ObjectInputStream(new FileInputStream("pc.bin"));
         try {
-            this.c = (Computer[]) stream.readObject();
+            this.pc = (Computer[]) stream.readObject();
+            return "file caricato con successo";
         } catch (ClassNotFoundException exception) {
             stream.close();
         }
+        return "Errore";
     }
-}
-
 }
