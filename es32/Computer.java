@@ -3,10 +3,10 @@ package es32;
 public class Computer {
     private int codice;
     private int anno;
-    private float clockCPU, dimRAM, dimDisk, dimMonitor;
+    private double clockCPU, dimRAM, dimDisk, dimMonitor;
     private String marca, modello;
 
-    public Computer(int codice, int anno, float clockCPU, float dimRAM, float dimDisk, float dimMonitor, String marca,
+    public Computer(int codice, int anno, double clockCPU, double dimRAM, double dimDisk, double dimMonitor, String marca,
             String modello) {
         this.codice = codice;
         this.anno = anno;

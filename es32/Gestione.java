@@ -35,8 +35,8 @@ public class Gestione {
             System.out.println("posizione ");
             int i = s.nextInt();
             if (pc[i] != null) System.out.println("posizione occupata");
-            else pc[i] = new Computer( int anno, String marca, String modello,double disco, double monitor, double ram,
-            double vcpu);
+            else pc[i] = new Computer(  anno,  marca,  modello, disco,  monitor,  ram,
+             vcpu);
         } catch (ArrayStoreException e) {
             System.out.println("Errore");
         } catch (ArrayIndexOutOfBoundsException e) {
