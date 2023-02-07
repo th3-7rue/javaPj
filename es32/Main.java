@@ -44,7 +44,7 @@ public class Main {
                     System.out.println(b.ricercaPerCodice());
                     break;
                 case 4:
-                    //System.out.println(b.());
+                    System.out.println(b.ricercaCaratteristiche());
                     break;
                 case 5:
                     System.out.println(b.salva());
