@@ -7,4 +7,29 @@ public class Gestione {
     public Gestione() {
         pc = new Computer[MAXpc];
     }
+
+    public void aggiungi() {
+
+    }
+    
+    public void elimina() {
+
+    }
+
+    public void ricercaCodice() {
+
+    }
+
+    public void ricercaCaratteristiche() {
+
+    }
+
+    public void salva() {
+
+    }
+
+    public void ripristina() {
+
+    }
+
 }
