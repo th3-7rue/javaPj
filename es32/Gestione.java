@@ -14,19 +14,29 @@ public class Gestione {
 
     // public Computer(int codice, int anno, String marca, String modello, double
     // disco, double monitor, double ram, double vcpu) {
-    public String ricercaCaratteristiche(){
+    public String ricercaCaratteristiche() {
         Scanner s = new Scanner(System.in);
         System.out.println("Inserisci la velocita' della RAM: ");
         double velRam = s.nextDouble();
         System.out.println("Inserisci la dimensione della memoria");
         double dimDisco = s.nextDouble();
-        for(int i=0; i<MAXpc; i++){
-            if(pc[i] !=null){
-                if(pc[i].getDimRAM()>velRam && pc[i].getDimDisk()>dimDisco){
-                    return pc[i].toString();
+        Computer[] c1 = new Computer[MAXpc];
+        int index = 0;
+        for (int i = 0; i < MAXpc; i++) {
+            if (pc[i] != null) {
+                if (pc[i].getDimRAM() > velRam && pc[i].getDimDisk() > dimDisco) {
+                    c1[index] = pc[i];
+                    index++;
                 }
             }
         }
+        for (int i = 0; i < index; i++) {
+            if (c1[i] != null) {
+                System.out.println(c1[i].toString());
+            }
+        }
+        return "Sono stati trovati " + index + " elementi";
+    }
 
     public String aggiungi() {
         Scanner s = new Scanner(System.in);
