@@ -9,11 +9,12 @@ public class Gestione {
         pc = new Computer[MAXpc];
     }
 
-    public void aggiungi() {
-
+    public String aggiungi() {
+        return "Computer aggiunto correttamente";
     }
-    
-    public void elimina() {
+
+    public String elimina() {
+        return "Computer aggiunto correttamente";
 
     }
 
