@@ -1,6 +1,6 @@
 package es32;
-
-public class Computer {
+import java.io.Serializable;
+public class Computer implements Serializable{
     private int codice;
     private int anno;
     private double clockCPU, dimRAM, dimDisk, dimMonitor;
