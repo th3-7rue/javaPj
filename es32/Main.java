@@ -24,7 +24,7 @@ public class Main {
                 if (t.hasNext()) {
                     scelta = t.nextInt();
                 }
-                if (scelta < 0 || scelta > 5) {
+                if (scelta < 0 || scelta > 6) {
                     throw new IllegalArgumentException();
                 }
             } catch (InputMismatchException | IllegalArgumentException e) {
