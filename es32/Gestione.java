@@ -16,7 +16,7 @@ public class Gestione {
     // disco, double monitor, double ram, double vcpu) {
     public String ricercaCaratteristiche() {
         Scanner s = new Scanner(System.in);
-        System.out.println("Inserisci la velocita' della RAM: ");
+        System.out.println("Inserisci la dimensione della RAM: ");
         double velRam = s.nextDouble();
         System.out.println("Inserisci la dimensione della memoria");
         double dimDisco = s.nextDouble();
