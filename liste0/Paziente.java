@@ -8,6 +8,14 @@ public class Paziente {
         this.urgenza = urgenza;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getUrgenza() {
+        return urgenza;
+    }
+
     public Paziente(Paziente paziente) {
         this.nome = paziente.nome;
         this.urgenza = paziente.urgenza;
