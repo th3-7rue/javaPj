@@ -30,14 +30,13 @@ public class Lista {
     public void lastFirst() {
         Nodo p = head;
         Nodo primo = p;
-        Nodo scambio = primo;
-
+        Nodo ultimo = p;
         while (p != null) {
-            primo = p;
+            ultimo.setLink(p);
             p = p.getLink();
         }
-        primo.setLink(head);
-        Nodo ultimo = scambio;
-        ultimo.setLink(ultimo);
+        //System.out.println(ultimo.getInfo());
+        head = ultimo;
+        ultimo = primo;
     }
 }
