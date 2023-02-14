@@ -7,5 +7,7 @@ public class Main {
         l.inserisciInTesta(c);
         l.inserisciInTesta(b);
         l.inserisciInTesta(a);
+        l.lastFirst();
+        System.out.println(l.stampa());
     }
 }
