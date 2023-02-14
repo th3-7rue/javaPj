@@ -29,14 +29,14 @@ public class Lista {
 
     public void lastFirst() {
         Nodo p = head;
-        Nodo primo = p;
         Nodo ultimo = p;
         while (p != null) {
-            ultimo.setLink(p);
+            ultimo = p;
             p = p.getLink();
         }
-        //System.out.println(ultimo.getInfo());
-        head = ultimo;
-        ultimo = primo;
+        int primo = head.getInfo();
+        head.setInfo(ultimo.getInfo());
+        ultimo.setInfo(primo);
+
     }
 }
