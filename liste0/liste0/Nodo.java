@@ -9,6 +9,7 @@ public class Nodo {
         this.info = info;
     }
 
+
     public Nodo getLink() {
         return link;
     }

@@ -10,6 +10,13 @@ public class Lista {
         elementi = 0;
     }
 
+    public void inserisciInTesta(int n) {
+        Nodo pn = new Nodo(n);
+        pn.setLink(head);
+        head = pn;
+        elementi++;
+    }
+
     public void lastFirst() {
         Nodo primo = head;
         Nodo scambio = primo;
