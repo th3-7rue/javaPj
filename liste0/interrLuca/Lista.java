@@ -11,9 +11,9 @@ public class Lista {
         Nodo pn = new Nodo(info);
         pn.setLink(head);
         head = pn;
-        Nodo p = head;
+        Nodo p = head.getLink();
         while (p.getLink() != null) {
-            if (p.getLink().equals(head.getLink())) {
+            if (p.getLink() == head.getLink()) {
                 break;
             }
             p = p.getLink();
