@@ -38,21 +38,20 @@ public class Lista {
         }
     }
 
-    public int scambiaCoppie() {
+    public void scambiaCoppie() {
+        Nodo prec = null;
         Nodo p = head;
-        Nodo pPrec = head;
-        if (head == null || head.getLink() == null) {
-            return -1;
-        }
-        while (p.getLink() != null) {
-            p.setLink(p.getLink().getLink());
-            pPrec = p;
+        while (p != null && p.getLink() != null) {
+            Nodo succ = p.getLink();
+            p.setLink(succ.getLink());
+            succ.setLink(p);
+            if (prec != null) {
+                prec.setLink(succ);
+            } else {
+                head = succ;
+            }
+            prec = p;
             p = p.getLink();
-
-            p.setLink(pPrec);
-            p = p.getLink();
-
         }
-        return 0;
     }
 }
