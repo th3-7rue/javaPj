@@ -2,6 +2,8 @@ package Pazienti;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hello world");
+        Lista l = new Lista();
+        Paziente mattia = new Paziente("Mattia Baritono", "rosso");
+        l.aggiungiPaziente(mattia);
     }
 }
