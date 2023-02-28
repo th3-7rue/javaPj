@@ -1,9 +1,12 @@
 package Pazienti;
 
 public class Paziente {
-    private String nome, urgenza;
+    private String[] urgenze = { "bianco", "giallo", "rosso" };
 
-    public Paziente(String nome, String urgenza) {
+    private String nome;
+    private int urgenza;
+
+    public Paziente(String nome, int urgenza) {
         this.nome = nome;
         this.urgenza = urgenza;
     }
@@ -12,7 +15,7 @@ public class Paziente {
         return nome;
     }
 
-    public String getUrgenza() {
+    public int getUrgenza() {
         return urgenza;
     }
 
@@ -20,4 +23,10 @@ public class Paziente {
         this.nome = paziente.nome;
         this.urgenza = paziente.urgenza;
     }
+
+    @Override
+    public String toString() {
+        return "Paziente [nome=" + nome + ", urgenza=" + urgenze[urgenza - 1] + "]";
+    }
+
 }
