@@ -1,7 +1,7 @@
 package es33;
 
-public class Email extends {
-    private String mittente, oggetto;
+public class Email {
+    private String mittente, oggetto, testo;
     private String dataEora;
-    
+
 }
