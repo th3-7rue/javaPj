@@ -2,22 +2,29 @@ package es33;
 
 public class Mailbox {
     private Nodo head;
+    private int size;
 
     public Mailbox() {
         head = null;
+        size = 0;
+    }
+
+    public int size() {
+        return size;
     }
 
     public void addEmail(Email email) {
-        Nodo newNode = new Nodo(email);
+        Nodo nuovoNodo = new Nodo(email);
         if (head == null) {
-            head = newNode;
+            head = nuovoNodo;
         } else {
-            Nodo current = head;
-            while (current.getLink() != null) {
-                current = current.getLink();
+            Nodo ultimoNodo = head;
+            while (ultimoNodo.getLink() != null) {
+                ultimoNodo = ultimoNodo.getLink();
             }
-            current.setLink(newNode);
+            ultimoNodo.setLink(nuovoNodo);
         }
+        size++;
     }
 
     public Email[] getEmails() {
@@ -95,5 +102,27 @@ public class Mailbox {
             current = current.getLink();
         }
         return count;
+    }
+    
+    public boolean removeEmailAt(int position) {
+        if (position < 0 || position >= size) {
+            return false;
+        }
+
+        if (position == 0) {
+            head = head.getLink();
+            size--;
+            return true;
+        }
+
+        Nodo prev = head;
+        for (int i = 1; i < position; i++) {
+            prev = prev.getLink();
+        }
+
+        Nodo curr = prev.getLink();
+        prev.setLink(curr.getLink());
+        size--;
+        return true;
     }
 }
