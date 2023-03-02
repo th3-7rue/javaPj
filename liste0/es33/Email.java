@@ -34,5 +34,11 @@ public class Email {
     public String getDataEora() {
         return dataEora;
     }
+
+    @Override
+    public String toString() {
+        return "Email [mittente=" + mittente + ", oggetto=" + oggetto + ", testo=" + testo + ", dataEora=" + dataEora
+                + "]";
+    }
     
 }
