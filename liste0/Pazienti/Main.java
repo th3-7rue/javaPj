@@ -9,7 +9,7 @@ public class Main {
         l.aggiungiPaziente(mattia);
         l.aggiungiPaziente(j);
         l.aggiungiPaziente(k);
-        l.stampaLista();
+       System.out.println(l.stampaLista());
         System.out.println(l.prossimoPaziente());
     }
 }

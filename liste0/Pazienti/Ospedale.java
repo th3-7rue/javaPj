@@ -38,11 +38,14 @@ public class Ospedale {
         }
     }
 
-    public void stampaLista() {
-        Nodo corrente = primo;
-        while (corrente != null) {
-            System.out.println(corrente.getInfo());
-            corrente = corrente.getLink();
+    public String toString() {
+        String str = head.toString();
+        if (left != null) {
+            str = str + ", left = " + left.toString();
         }
+        if (right != null) {
+            str = str + ", right = " + right.toString();
+        }
+        return str;
     }
 }
