@@ -37,8 +37,10 @@ public class Email {
 
     @Override
     public String toString() {
-        return "Email [mittente=" + mittente + ", oggetto=" + oggetto + ", testo=" + testo + ", dataEora=" + dataEora
-                + "]";
+        return "From: " + mittente + "\n"
+                + "Subject: " + oggetto + "\n"
+                + "Date: " + dataEora + "\n"
+                + "Message: " + testo;
     }
     
 }
