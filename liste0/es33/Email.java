@@ -18,4 +18,21 @@ public class Email {
         this.dataEora = email.dataEora;
 
     }
+
+    public String getMittente() {
+        return mittente;
+    }
+
+    public String getOggetto() {
+        return oggetto;
+    }
+
+    public String getTesto() {
+        return testo;
+    }
+
+    public String getDataEora() {
+        return dataEora;
+    }
+    
 }
