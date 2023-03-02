@@ -9,6 +9,13 @@
             "name": "MailboxGUI",
             "request": "launch",
             "mainClass": "es33.MailboxGUI",
+            "projectName": "javaPj_846789b2"
+        },
+        {
+            "type": "java",
+            "name": "MailboxGUI",
+            "request": "launch",
+            "mainClass": "es33.MailboxGUI",
             "projectName": "javaPj_cee4c81e"
         },
         {
