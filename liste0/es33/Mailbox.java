@@ -70,7 +70,7 @@ public class Mailbox {
         int count = 0;
         Nodo current = head;
         while (current != null) {
-            if (current.getInfo().getTesto().contains(keyword) || current.getInfo().getOggetto().contains(keyword)) {
+            if (current.getInfo().getOggetto().contains(keyword)) {
                 count++;
             }
             current = current.getLink();
