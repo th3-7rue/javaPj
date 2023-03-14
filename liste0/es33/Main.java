@@ -24,21 +24,7 @@ public class Main {
                 "2022-01-04 16:00:00");
         mailbox.addEmail(email4);
 
-        // stampa tutte le email presenti nella casella di posta
-        System.out.println("Tutte le email:");
-        Email[] allEmails = mailbox.getEmails();
-        for (Email email : allEmails) {
-            System.out.println(email);
-        }
-
-        // cerca le email inviate da "mario@example.com"
-        System.out.println("\nEmail inviate da mario@example.com:");
-        Email[] marioEmails = mailbox.searchBySender("mario@example.com");
-        for (Email email : marioEmails) {
-            System.out.println(email);
-        }
-
-        // cerca le email che contengono la parola "progetto"
+        // cerca le email che contengono la parola "progetto" nell'oggetto
         System.out.println("\nEmail che contengono la parola \"progetto\":");
         Email[] progettoEmails = mailbox.searchByKeyword("progetto");
         for (Email email : progettoEmails) {

@@ -27,33 +27,6 @@ public class Mailbox {
         size++;
     }
 
-    public Email[] getEmails() {
-        int size = countEmails();
-        Email[] emails = new Email[size];
-        Nodo current = head;
-        int i = 0;
-        while (current != null) {
-            emails[i] = current.getInfo();
-            current = current.getLink();
-            i++;
-        }
-        return emails;
-    }
-
-    public Email[] searchBySender(String sender) {
-        int size = countEmailsBySender(sender);
-        Email[] result = new Email[size];
-        Nodo current = head;
-        int i = 0;
-        while (current != null) {
-            if (current.getInfo().getMittente().equals(sender)) {
-                result[i] = current.getInfo();
-                i++;
-            }
-            current = current.getLink();
-        }
-        return result;
-    }
 
     public Email[] searchByKeyword(String keyword) {
         int size = countEmailsByKeyword(keyword);
@@ -61,7 +34,7 @@ public class Mailbox {
         Nodo current = head;
         int i = 0;
         while (current != null) {
-            if (current.getInfo().getTesto().contains(keyword) || current.getInfo().getOggetto().contains(keyword)) {
+            if (current.getInfo().getOggetto().contains(keyword)) {
                 result[i] = current.getInfo();
                 i++;
             }
@@ -70,15 +43,6 @@ public class Mailbox {
         return result;
     }
 
-    private int countEmails() {
-        int count = 0;
-        Nodo current = head;
-        while (current != null) {
-            count++;
-            current = current.getLink();
-        }
-        return count;
-    }
 
     private int countEmailsBySender(String sender) {
         int count = 0;
