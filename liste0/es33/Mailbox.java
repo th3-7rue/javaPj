@@ -46,7 +46,7 @@ public class Mailbox {
         Nodo current = head;
         int i = 0;
         while (current != null) {
-            if (current.getInfo().getTesto().contains(keyword) || current.getInfo().getOggetto().contains(keyword)) {
+            if (current.getInfo().getOggetto().contains(keyword)) {
                 result[i] = current.getInfo();
                 i++;
             }

@@ -28,8 +28,8 @@ public class Main {
         System.out.println(mailbox.removeEmailAt(2));
 
         // cerca le email che contengono la parola "progetto" nell'oggetto
-        System.out.println("\nEmail che contengono la parola \"progetto\":");
-        Email[] progettoEmails = mailbox.searchByKeyword("progetto");
+        System.out.println("\nEmail che contengono la parola \"Progetto\":");
+        Email[] progettoEmails = mailbox.searchByKeyword("Progetto");
         for (Email email : progettoEmails) {
             System.out.println(email);
         }
