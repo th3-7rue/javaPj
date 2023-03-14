@@ -65,7 +65,6 @@ public class Mailbox {
         return count;
     }
 
-
     private int countEmailsByKeyword(String keyword) {
         int count = 0;
         Nodo current = head;
@@ -77,26 +76,31 @@ public class Mailbox {
         }
         return count;
     }
-    
-    public boolean removeEmailAt(int position) {
-        if (position < 0 || position >= size) {
-            return false;
-        }
 
-        if (position == 0) {
-            head = head.getLink();
+    public boolean removeEmailAt(int position) {
+        try {
+            if (position < 0 || position >= size) {
+                return false;
+            }
+
+            if (position == 0) {
+                head = head.getLink();
+                size--;
+                return true;
+            }
+
+            Nodo prev = head;
+            for (int i = 1; i < position; i++) {
+                prev = prev.getLink();
+            }
+
+            Nodo curr = prev.getLink();
+            prev.setLink(curr.getLink());
             size--;
             return true;
+        } catch (NullPointerException e) {
+            System.out.println("Email non esistente");
+            return false;
         }
-
-        Nodo prev = head;
-        for (int i = 1; i < position; i++) {
-            prev = prev.getLink();
-        }
-
-        Nodo curr = prev.getLink();
-        prev.setLink(curr.getLink());
-        size--;
-        return true;
     }
 }
