@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "cinema.Main",
+            "projectName": "javaPj_cee4c81e"
+        },
+        {
+            "type": "java",
             "name": "MailboxGUI",
             "request": "launch",
             "mainClass": "es33.MailboxGUI",
