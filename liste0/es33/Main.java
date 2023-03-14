@@ -24,6 +24,9 @@ public class Main {
                 "2022-01-04 16:00:00");
         mailbox.addEmail(email4);
 
+        // elimina la mail in posizione 2
+        System.out.println(mailbox.removeEmailAt(2));
+
         // cerca le email che contengono la parola "progetto" nell'oggetto
         System.out.println("\nEmail che contengono la parola \"progetto\":");
         Email[] progettoEmails = mailbox.searchByKeyword("progetto");
