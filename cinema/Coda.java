@@ -29,24 +29,37 @@ public class Coda {
     }
 
     public String rimuoviInTesta() {
-        head = head.getLink();
-        return "Persona in testa rimossa";
+        try {
+            Nodo p = head;
+            head = head.getLink();
+            return p.getInfo().getNome() + " è stato rimosso";
+        } catch (NullPointerException e) {
+            return "Coda vuota";
+        }
     }
 
     public String estraiProssimo() {
-        Nodo p = tail;
-        head = head.getLink();
-        return p.getInfo().getNome() + " è entrato";
+        try {
+            Nodo p = head;
+            head = head.getLink();
+            return p.getInfo().getNome() + " è entrato";
+        } catch (NullPointerException e) {
+            return "Coda vuota";
+        }
     }
 
     public String visualizzaLista() {
-        Nodo p = head;
-        String s = "Coda: ";
-        while (p != null) {
-            s += p.getInfo() + "\n";
-            p = p.getLink();
+        String s = "Coda: \n";
+        try {
+            Nodo p = head;
+            while (p != null) {
+                s += p.getInfo() + "\n";
+                p = p.getLink();
+            }
+            s += "Prossimo: " + head.getInfo();
+        } catch (NullPointerException e) {
+            s = "Coda vuota";
         }
-        s += "Prossimo: " + head.getInfo();
         return s;
     }
 }

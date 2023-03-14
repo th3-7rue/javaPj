@@ -41,7 +41,7 @@ public class Main {
                     System.out.println(b.estraiProssimo());
                     break;
                 case 4:
-                
+                    System.out.println(b.visualizzaLista());
                     break;
                 default:
                     break;
