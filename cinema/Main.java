@@ -35,10 +35,13 @@ public class Main {
                     System.out.println(b.addPersona());
                     break;
                 case 2:
+                    System.out.println(b.rimuoviInTesta());
                     break;
                 case 3:
+                    System.out.println(b.estraiProssimo());
                     break;
                 case 4:
+                
                     break;
                 default:
                     break;

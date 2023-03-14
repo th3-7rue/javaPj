@@ -14,4 +14,10 @@ public class Persona {
     public Persona(Persona persona) {
         this.nome = persona.nome;
     }
+
+    @Override
+    public String toString() {
+        return "Persona [nome=" + nome + "]";
+    }
+    
 }
