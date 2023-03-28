@@ -1,6 +1,7 @@
 package arrayList0;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ProductList {
     private ArrayList<Product> l;
@@ -15,9 +16,11 @@ public class ProductList {
     }
 
     public void rimuovi(String nome) {
-        for (Product product : l) {
+        Iterator<Product> iterator = l.iterator();
+        while (iterator.hasNext()) {
+            Product product = iterator.next();
             if (product.getNome().equals(nome)) {
-                l.remove(product);
+                iterator.remove();
             }
         }
     }

@@ -8,6 +8,6 @@ public class Main {
         l.aggiungi("riccardo", 40);
         l.stampa();
         l.rimuovi("riccardo");
-        //l.stampa();
+        l.stampa();
     }
 }
