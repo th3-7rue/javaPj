@@ -26,6 +26,16 @@ public class ToDoList {
     }
 
     public void stampa() {
-        
+        // Ordina la lista in base alla priority decrescente
+        Collections.sort(l, new Comparator<Task>() {
+            public int compare(Task t1, Task t2) {
+                return Integer.compare(t2.getPriority(), t1.getPriority());
+            }
+        });
+
+        // Stampa gli elementi della lista ordinata
+        for (Task t : l) {
+            System.out.println(t.toString());
+        }
     }
 }
