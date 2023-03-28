@@ -22,4 +22,8 @@ public class Task {
         return "Task [descrizione=" + descrizione + ", priority=" + priority + "]";
     }
 
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
 }
