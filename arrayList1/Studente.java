@@ -41,4 +41,10 @@ public class Studente {
         this.voto3 = voto3;
     }
 
+    @Override
+    public String toString() {
+        return "Studente [nome=" + nome + ", cognome=" + cognome + ", voto1=" + voto1 + ", voto2=" + voto2 + ", voto3="
+                + voto3 + "]";
+    }
+
 }
