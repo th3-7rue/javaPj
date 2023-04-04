@@ -30,16 +30,12 @@ public class ListaStudenti {
         return (studente.getVoto1() + studente.getVoto2() + studente.getVoto3()) / 3;
     }
 
-    private void rimuovi(Studente studente) {
-        l.remove(studente);
-    }
-
     public void rimuoviInsufficienti() {
         Iterator<Studente> iterator = l.iterator();
         while (iterator.hasNext()) {
             Studente studente = iterator.next();
             if (calcolaMedia(studente) < 6) {
-                rimuovi(studente);
+                iterator.remove();
             }
         }
     }
