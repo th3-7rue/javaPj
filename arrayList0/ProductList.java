@@ -15,14 +15,16 @@ public class ProductList {
         l.add(p);
     }
 
-    public void rimuovi(String nome) {
+    public String rimuovi(String nome) {
         Iterator<Product> iterator = l.iterator();
         while (iterator.hasNext()) {
             Product product = iterator.next();
             if (product.getNome().equals(nome)) {
                 iterator.remove();
+                return "Il prodotto è stato rimosso";
             }
         }
+        return "Prodotto non trovato";
     }
 
     public void stampa() {
