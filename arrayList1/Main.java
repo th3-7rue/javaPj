@@ -15,6 +15,7 @@ public class Main {
         l.agginugiStudente(s5);
 
         l.assegnaVoti();
+        l.rimuoviInsufficienti();
         l.stampa();
     }
 }

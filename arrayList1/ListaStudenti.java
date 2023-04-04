@@ -1,6 +1,7 @@
 package arrayList1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 public class ListaStudenti {
@@ -19,9 +20,27 @@ public class ListaStudenti {
         int votoMax = 10;
         int votoMin = 1;
         for (Studente studente : l) {
-            studente.setVoto1(genera.nextInt(votoMax - votoMin) + votoMin);
-            studente.setVoto2(genera.nextInt(votoMax - votoMin) + votoMin);
-            studente.setVoto3(genera.nextInt(votoMax - votoMin) + votoMin);
+            studente.setVoto1(genera.nextInt(votoMax - votoMin + 1) + votoMin);
+            studente.setVoto2(genera.nextInt(votoMax - votoMin + 1) + votoMin);
+            studente.setVoto3(genera.nextInt(votoMax - votoMin + 1) + votoMin);
+        }
+    }
+
+    public float calcolaMedia(Studente studente) {
+        return (studente.getVoto1() + studente.getVoto2() + studente.getVoto3()) / 3;
+    }
+
+    private void rimuovi(Studente studente) {
+        l.remove(studente);
+    }
+
+    public void rimuoviInsufficienti() {
+        Iterator<Studente> iterator = l.iterator();
+        while (iterator.hasNext()) {
+            Studente studente = iterator.next();
+            if (calcolaMedia(studente) < 6) {
+                rimuovi(studente);
+            }
         }
     }
 
