@@ -1,6 +1,6 @@
 package comparable;
 
-public class Persona implements Comparable<Persona>{
+public class Persona implements Comparable<Persona> {
     private String nome;
 
     private int eta;
@@ -25,8 +25,7 @@ public class Persona implements Comparable<Persona>{
 
     @Override
     public int compareTo(Persona o) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+        return this.eta - o.eta;
     }
-    
+
 }
