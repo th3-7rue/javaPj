@@ -1,6 +1,8 @@
 package comparable;
 
-public class Persona {
+import java.lang.Comparable;
+impo
+public class Persona implements Comparable{
     private String nome;
 
     private int eta;
