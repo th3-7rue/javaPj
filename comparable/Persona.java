@@ -1,8 +1,6 @@
 package comparable;
 
-import java.lang.Comparable;
-impo
-public class Persona implements Comparable{
+public class Persona implements Comparable<Persona>{
     private String nome;
 
     private int eta;
@@ -23,6 +21,12 @@ public class Persona implements Comparable{
     @Override
     public String toString() {
         return "Persona [nome=" + nome + ", eta=" + eta + "]";
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
     }
     
 }
