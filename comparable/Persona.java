@@ -18,6 +18,10 @@ public class Persona implements Comparable<Persona> {
         this.eta = eta;
     }
 
+    public boolean isMaggiorenne() {
+        return eta >= 18;
+    }
+
     @Override
     public String toString() {
         return "Persona [nome=" + nome + ", eta=" + eta + "]";
