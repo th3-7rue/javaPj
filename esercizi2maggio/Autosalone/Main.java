@@ -49,5 +49,6 @@ public class Main {
                     System.out.println("Scelta non valida. Riprova.");
             }
         }
+        input.close();
     }
 }
