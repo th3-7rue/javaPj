@@ -10,7 +10,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Acquirente> acquirenti = new ArrayList<>();
-        while (true) {
+        boolean continua = true;
+        while (continua) {
             System.out.println("Cosa vuoi fare?");
             System.out.println("1. Inserisci un nuovo acquirente");
             System.out.println("2. Visualizza l'elenco degli acquirenti");
@@ -60,16 +61,19 @@ public class Main {
 
                     Iterator<Acquirente> iterator = acquirenti.iterator();
                     while (iterator.hasNext()) {
-                        Acquirente acquirente = iterator.next();
+                        acquirente = iterator.next();
                         System.out.println(acquirente);
                     }
                     break;
                 case 3:
                     System.out.println("Arrivederci!");
-                    return;
+                    break;
                 default:
                     System.out.println("Scelta non valida!");
+                    continua = false;
+                    break;
             }
         }
+        scanner.close();
     }
 }
