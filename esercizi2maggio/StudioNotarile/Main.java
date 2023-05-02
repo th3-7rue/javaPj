@@ -18,7 +18,6 @@ public class Main {
             System.out.println("3. Esci");
 
             String scelta = scanner.nextLine();
-            scanner.nextLine(); // consuma il carattere newline
 
             switch (scelta) {
                 case "1":
