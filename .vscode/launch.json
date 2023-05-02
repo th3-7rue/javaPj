@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "esercizi2maggio.Autosalone.Main",
+            "projectName": "javaPj_cee4c81e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "comparable.Main",
             "projectName": "javaPj_cee4c81e"
         },
