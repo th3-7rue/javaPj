@@ -17,11 +17,11 @@ public class Main {
             System.out.println("2. Visualizza l'elenco degli acquirenti");
             System.out.println("3. Esci");
 
-            int scelta = scanner.nextInt();
+            String scelta = scanner.nextLine();
             scanner.nextLine(); // consuma il carattere newline
 
             switch (scelta) {
-                case 1:
+                case "1":
                     System.out.println("Inserisci i dati dell'acquirente:");
                     System.out.print("Nome: ");
                     String nome = scanner.nextLine();
@@ -51,7 +51,7 @@ public class Main {
                             prezzo, caparra, acquistoConMutuo);
                     acquirenti.add(acquirente);
                     break;
-                case 2:
+                case "2":
                     Collections.sort(acquirenti, new Comparator<Acquirente>() {
                         @Override
                         public int compare(Acquirente o1, Acquirente o2) {
@@ -65,13 +65,12 @@ public class Main {
                         System.out.println(acquirente);
                     }
                     break;
-                case 3:
+                case "3":
                     System.out.println("Arrivederci!");
+                    continua = false;
                     break;
                 default:
                     System.out.println("Scelta non valida!");
-                    continua = false;
-                    break;
             }
         }
         scanner.close();
