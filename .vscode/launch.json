@@ -1,138 +1,152 @@
 {
-    // Usare IntelliSense per informazioni sui possibili attributi.
-    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
-    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "esercizi2maggio.Calciatori.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "esercizi2maggio.StudioNotarile.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "esercizi2maggio.Autosalone.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "comparable.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "arrayList1.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "toDoList.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "arrayList0.Main",
-            "projectName": "javaPj_cee4c81e"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Pazienti.Main"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Main"
-        },
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(1)",
-            "request": "launch",
-            "mainClass": "es30.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(2)",
-            "request": "launch",
-            "mainClass": "es32.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(3)",
-            "request": "launch",
-            "mainClass": "esCC.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(4)",
-            "request": "launch",
-            "mainClass": "esTryCatch.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(5)",
-            "request": "launch",
-            "mainClass": "inserisciInTesta.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(6)",
-            "request": "launch",
-            "mainClass": "interrLuca.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(7)",
-            "request": "launch",
-            "mainClass": "interrQuaglia.Main",
-            "projectName": "javaPj_2210e7ed"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main(8)",
-            "request": "launch",
-            "mainClass": "throwsa.Main",
-            "projectName": "javaPj_2210e7ed"
-        }
-    ]
+  // Usare IntelliSense per informazioni sui possibili attributi.
+  // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+  // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Grafica",
+      "request": "launch",
+      "mainClass": "verificamaggio.Grafica",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "verificamaggio.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "esercizi2maggio.Calciatori.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "esercizi2maggio.StudioNotarile.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "esercizi2maggio.Autosalone.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "comparable.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "arrayList1.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "toDoList.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "arrayList0.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Pazienti.Main"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Main"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(1)",
+      "request": "launch",
+      "mainClass": "es30.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(2)",
+      "request": "launch",
+      "mainClass": "es32.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(3)",
+      "request": "launch",
+      "mainClass": "esCC.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(4)",
+      "request": "launch",
+      "mainClass": "esTryCatch.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(5)",
+      "request": "launch",
+      "mainClass": "inserisciInTesta.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(6)",
+      "request": "launch",
+      "mainClass": "interrLuca.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(7)",
+      "request": "launch",
+      "mainClass": "interrQuaglia.Main",
+      "projectName": "javaPj_2210e7ed"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main(8)",
+      "request": "launch",
+      "mainClass": "throwsa.Main",
+      "projectName": "javaPj_2210e7ed"
+    }
+  ]
 }
