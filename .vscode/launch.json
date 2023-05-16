@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "esercizi2maggio.Calciatori.Main",
+            "projectName": "javaPj_cee4c81e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "esercizi2maggio.StudioNotarile.Main",
             "projectName": "javaPj_cee4c81e"
         },
