@@ -118,5 +118,27 @@ public class Registro {
     // ordina
     public void ordina() {
         // ordina prove
+        // stampa prove
+        System.out.println("ordina");
+        // chiedi chiave di ordinamento
+        System.out.println("scegli chiave di ordinamento");
+        System.out.println("1. cognome");
+        System.out.println("2. nome");
+        System.out.println("3. materia");
+        System.out.println("4. voto");
+        System.out.println("5. data");
+                int scelta;
+
+        try {
+            scelta = Integer.parseInt(System.console().readLine());
+        } catch (Exception e) {
+            scelta = 0;
+        }
+        // chiedi se crescente o decrescente
+        System.out.println("scegli crescente o decrescente");
+        System.out.println("1. crescente");
+        System.out.println("2. decrescente");
+        // ordina
+
     }
 }
