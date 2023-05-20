@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "lorenzopapi.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
       "name": "Grafica",
       "request": "launch",
       "mainClass": "verificamaggio.Grafica",
