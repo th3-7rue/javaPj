@@ -127,17 +127,19 @@ public class Registro {
         System.out.println("3. materia");
         System.out.println("4. voto");
         System.out.println("5. data");
-                int scelta;
+                int chiave;
 
         try {
-            scelta = Integer.parseInt(System.console().readLine());
+            chiave = Integer.parseInt(System.console().readLine());
         } catch (Exception e) {
-            scelta = 0;
+            chiave = 0;
         }
+        int crescente;
         // chiedi se crescente o decrescente
         System.out.println("scegli crescente o decrescente");
         System.out.println("1. crescente");
         System.out.println("2. decrescente");
+
         // ordina
 
     }
