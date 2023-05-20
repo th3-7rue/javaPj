@@ -4,12 +4,12 @@ public class Prova {
     private String nome, cognome, materia, data;
     private double voto;
     
-    public Prova(String nome, String cognome, String materia, String data, double voto) {
+    public Prova(String cognome, String nome, String materia, String voto, String data) {
         this.nome = nome;
         this.cognome = cognome;
         this.materia = materia;
         this.data = data;
-        this.voto = voto;
+        this.voto = Double.parseDouble(voto);
     }
     public String getNome() {
         return nome;
