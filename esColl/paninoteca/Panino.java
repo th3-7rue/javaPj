@@ -9,10 +9,12 @@ public class Panino {
     public String getTipoPane() {
         return tipoPane;
     }
-    public Panino(String tipoPane, ArrayList<String> ingredienti) {
+
+    public Panino(String tipoPane) {
         this.tipoPane = tipoPane;
-        this.ingredienti = ingredienti;
     }
+
+    
     public ArrayList<String> getIngredienti() {
         return ingredienti;
     }
