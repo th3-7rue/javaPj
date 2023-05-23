@@ -27,7 +27,7 @@ public class Ristorante {
         int numTavolo = Integer.parseInt(System.console().readLine());
         System.out.println("Inserisci data e ora (gg mm aaaa hh mm):");
         int g=sc.nextInt();
-        int m=sc.nextInt();
+        int m=sc.nextInt()-1;
         int a=sc.nextInt();
         int h=sc.nextInt();
         int min = sc.nextInt();
