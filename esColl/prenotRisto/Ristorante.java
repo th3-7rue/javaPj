@@ -99,4 +99,12 @@ public class Ristorante {
     }
 
     // ordinaPrenotazioni
+    public void ordinaPrenotazioni() {
+        // ordina prenotazioni per nome
+        prenotazioni.sort((p1, p2) -> p1.getNome().compareTo(p2.getNome()));
+        // visualizza prenotazioni
+        for (Prenotazione p : prenotazioni) {
+            System.out.println(p);
+        }
+    }
 }
