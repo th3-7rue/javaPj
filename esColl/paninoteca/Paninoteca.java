@@ -13,16 +13,17 @@ public class Paninoteca {
         System.out.println("Aggiungi panino");
         System.out.println("Tipo pane: ");
         String tipoPane = System.console().readLine();
-        System.out.println("Ingredienti: ");
-        // inserisci ingredienti nell'arraylist separati da virgola
-        String ingredientiString = System.console().readLine();
-        String[] ingredienti = ingredientiString.split(",");
-        ArrayList<String> ingredientiList = new ArrayList<String>();
-        for (String ingrediente : ingredienti) {
-            ingredientiList.add(ingrediente);
-        }
-        Panino panino = new Panino(tipoPane, ingredientiList);
+        // menu aggiungi/rimuovi ingrediente
+                ArrayList<String> ingredienti = new ArrayList<String>();
+
+        do{
+        System.out.println("Ingredienti: ");}
+        // inserimento ingredienti usando i metodi di Panino
+        
+        
+        Panino panino = new Panino(tipoPane, ingredienti);
         panini.add(panino);
         System.out.println("Panino aggiunto");
     }
+    
 }
