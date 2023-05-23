@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Panino {
     private String tipoPane;
     private ArrayList<String> ingredienti;
-    
     public String getTipoPane() {
         return tipoPane;
     }
 
     public Panino(String tipoPane) {
         this.tipoPane = tipoPane;
+        ingredienti = new ArrayList<String>();
     }
 
     
