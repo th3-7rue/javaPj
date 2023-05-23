@@ -25,5 +25,6 @@ public class GUIApp extends JFrame {
         // Crea un'istanza della tua classe GUIApp e mostrala
         GUIApp app = new GUIApp();
         app.setVisible(true);
+        
     }
 }
