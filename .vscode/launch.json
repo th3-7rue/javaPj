@@ -8,6 +8,13 @@
       "type": "java",
       "name": "Main",
       "request": "launch",
+      "mainClass": "esColl.paninoteca.Main",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
       "mainClass": "esColl.prenotRisto.Main",
       "projectName": "javaPj_cee4c81e"
     },
