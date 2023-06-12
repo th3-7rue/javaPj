@@ -1,24 +1,17 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
 class Veicolo
 {
     private $targa, $marca, $modello;
-    private $nPosti, $codice;
+    private $nPosti;
 
-    public function __construct($targa, $marca, $modello, $nPosti, $codice)
+    public function __construct($targa, $marca, $modello, $nPosti)
     {
         $this->targa = $targa;
         $this->marca = $marca;
         $this->modello = $modello;
         $this->nPosti = $nPosti;
-        $this->codice = $codice;
-    }
-
-    public function getCodice()
-    {
-        return $this->codice;
     }
 
     public function getTarga()
@@ -40,24 +33,27 @@ class Veicolo
     {
         return $this->nPosti;
     }
+    public function __toString()
+    {
+        return "Targa: " . $this->targa . ", Marca: " . $this->marca . ", Modello: " . $this->modello . ", Posti: " . $this->nPosti;
+    }
 }
 
 class Autonoleggio
 {
     private $v;
-    private $codice = 1;
 
     public function __construct()
     {
         $this->v = array_fill(0, 1000, null);
+        $this->ripristinaDaFile("inventario");
     }
 
     public function aggiungiVeicolo($targa, $marca, $modello, $nPosti)
     {
         $posizione = $this->trovaPrimaPosizioneLibera();
         if ($posizione !== false) {
-            $this->v[$posizione] = new Veicolo($targa, $marca, $modello, $nPosti, $this->codice);
-            $this->codice++;
+            $this->v[$posizione] = new Veicolo($targa, $marca, $modello, $nPosti);
 
             // Salva l'inventario su file
             $this->salvaSuFile("inventario");
@@ -116,11 +112,11 @@ class Autonoleggio
         return "Veicolo non trovato";
     }
 
-    public function eliminaVeicoloCodice($codice)
+    public function eliminaVeicolo($targa)
     {
         for ($i = 0; $i < count($this->v); $i++) {
             if ($this->v[$i] != null) {
-                if ($this->v[$i]->getCodice() == $codice) {
+                if ($this->v[$i]->getTarga() == $targa) {
                     $this->v[$i] = null;
                     return "Veicolo eliminato con successo";
                 }
@@ -208,8 +204,8 @@ if ($scelta === '1') {
     $nPosti = intval($_GET['nPosti']);
     echo $v0->aggiungiVeicolo($targa, $marca, $modello, $nPosti);
 } elseif ($scelta === '2') {
-    $codice = intval($_GET['codice']);
-    echo $v0->eliminaVeicoloCodice($codice);
+    $targa = $_GET['targa'];
+    echo $v0->eliminaVeicoloTarga($targa);
 } elseif ($scelta === '3') {
     $targa = $_GET['targa'];
     echo $v0->eliminaVeicoloTarga($targa);
@@ -260,8 +256,8 @@ if ($scelta === '1') {
     <h2>Elimina Veicolo</h2>
     <form action="#" method="GET">
         <input type="hidden" name="scelta" value="2">
-        <label for="codice">Codice:</label>
-        <input type="number" name="codice" required><br>
+        <label for="targa">Targa:</label>
+        <input type="text" name="targa" required><br>
         <input type="submit" value="Elimina Veicolo">
     </form>
 
