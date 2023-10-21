@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ProvaPallaServer",
+      "request": "launch",
+      "mainClass": "ProvaPallaServer",
+      "projectName": "javaPj_cee4c81e"
+    },
+    {
+      "type": "java",
       "name": "GUIApp",
       "request": "launch",
       "mainClass": "esColl.prenotRisto.GUIApp",

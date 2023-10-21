@@ -17,9 +17,14 @@ public class ThreadConnessione implements Runnable{
     
 
     public void run() {
-        try{
+        try {
             ServerSocket server = new ServerSocket(2000);
-            finestra.setCon
+            finestra.setConnessione(server.accept());
+            server.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+            System.exit(-1);
         }
     }
+    
 }
