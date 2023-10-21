@@ -1,12 +1,15 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import java.io.*;
 import java.net.*;
-public class PallaNetClient extends JFrame implements ActionListener{
+
+public class PallaNetClient extends JFrame implements ActionListener {
     private Socket connessione = null;
     private DataOutputStream out = null;
     private DataInputStream in = null;
+
     public PallaNetClient() {
         super("PallaNetClient");
         this.setSize(500, 400);
@@ -15,7 +18,7 @@ public class PallaNetClient extends JFrame implements ActionListener{
         connetti();
         this.setVisible(true);
     }
-}
+
 public void connetti(){
     try{
         connessione = new Socket("localhost", 2000);
@@ -28,4 +31,13 @@ public void connetti(){
     Container c = this.getContentPane();
     PannelloClient pannello = new PannelloClient(this, this.getSize());
     c.add(pannello);
+}
+
+    public DataOutputStream getOut() {
+        return out;
+    }
+
+    public DataInputStream getIn() {
+        return in;
+    }
 }
